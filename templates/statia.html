@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>
+        Листопадные рододендроны (азалии)
+    </h1>
+    <br>
+    <h2>
+        Листопадные рододендроны (азалии) – группа рододендронов, обладающая хорошей морозостойкостью. Предпочитают тихие, хорошо освещенные места. Прекрасно смотрятся как в одиночных, так и в групповых посадках. В мае-начале июня азалии радуют нас ярким и сочным цветением. Некоторые сорта обладают приятным сладким ароматом.
+    </h2>
+    <br>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{url_for('static', filename='image/first.png')}}" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename='image/second.png')}}" class="d-block w-100">
+            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </div>
+{% endblock %}

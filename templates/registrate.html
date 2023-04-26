@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>
+        Регистрация
+    </h1>
+    <form action="{{url_for('registrate')}}" method="post" class="form-contact">
+        <p>
+            <label>
+                Фамилия
+            </label>
+            <input type="text" name="name2" value="" required/>
+        </p>
+        <p>
+            <label>
+                Имя
+            </label>
+            <input type="text" name="name1" value="" required/>
+        </p>
+        <p>
+            <label>
+                Отчество (при наличии)
+            </label>
+            <input type="text" name="name3" value="" required/>
+        </p>
+        <p>
+            <label>
+                Укажите ваш пол:
+            </label>
+        </p>
+        <p>
+            <input type="radio" name="sex" id="male" value="male" checked>
+            <label for="male">
+                мужской
+            </label>
+            <input type="radio" name="sex" id="female" value="female">
+            <label for="female">
+                женский
+            </label>
+            <input type="radio" name="sex" id="other" value="other">
+            <label for="other">
+                другой
+            </label>
+        </p>
+        <p>
+            <label>
+                Телефон
+            </label>
+            <input type="text" name="tel" value="" required />
+        </p>
+        <p>
+            <label>
+                Почта
+            </label>
+            <input type="text" name="email" value="" required />
+        </p>
+        <p>
+            <label>
+                Логин
+            </label>
+            <input type="text" name="login" value="" required />
+        </p>
+        <p>
+            <label>
+                Пароль
+            </label>
+            <input type="text" name="password" value="" required />
+        </p>
+        <p>
+            <input type="submit" value="Зарегистрироваться" />
+        </p>
+    </form>
+{% endblock %}

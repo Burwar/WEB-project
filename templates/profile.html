@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table bolder="0" class="profile-table">
+        <tr>
+            <td valign="top">
+                <div class="profile-ava">
+                    <img src="{{url_for('userava')}}">
+                </div>
+                <div class="profile-load">
+                    <form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+                        <p>
+                            <input type="file" name="file">
+                        </p>
+                        <p>
+                            <input type="submit" value="загрузить">
+                        </p>
+                    </form>
+                </div>
+            </td>
+            <td valign="top" class="profile-panel">
+                <ul>
+                    <li>
+                        Фамилия: {{current_user.getName2()}}
+                    </li>
+                    <li>
+                        Имя: {{current_user.getName1()}}
+                    </li>
+                    <li>
+                        Отчество: {{current_user.getName3()}}
+                    </li>
+                    <li>
+                        Пол: {{current_user.getSex()}}
+                    </li>
+                    <li>
+                        Номер телефона: {{current_user.getTel()}}
+                    </li>
+                    <li>
+                        Адрес электронной почты: {{current_user.getEmail()}}
+                    </li>
+                </ul>
+                <p>
+                    <a href="{{url_for('logout')}}">
+                        Выйти из профиля
+                    </a>
+                </p>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
